@@ -4,13 +4,11 @@ import { CiShoppingCart } from "react-icons/ci";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { useGlobalContext } from "../context/contextApi";
 import { Link } from "react-router-dom";
-
 const NavBar = () => {
     const { isOpen, SetIsOpen, cart } = useGlobalContext();
     const [isMenuOpen, setMenuIsOpen] = useState(false);
-
     const leftNavLinks = [
-        { name: "BOTTLES", path: "/bottles" },
+       
         { name: "PITCHERS", path: "/pitchers" },
         { name: "SHOP ALL", path: "/shopall" },
     ];
@@ -40,14 +38,12 @@ const NavBar = () => {
                         </Link>
                     ))}
                 </ul>
-
                 {/* User & Shopping Cart Icons (Always Visible) */}
                 <div className="flex items-center space-x-4">
                     {/* User Icon */}
                     <div className="cursor-pointer">
                         <Link to="login"> <FaRegUser className="text-2xl text-blue-400" /></Link>
                     </div>
-
                     {/* Shopping Cart */}
                     <div className="relative cursor-pointer" onClick={() => SetIsOpen(!isOpen)}>
                         <CiShoppingCart className="text-3xl text-blue-400" />
@@ -57,14 +53,11 @@ const NavBar = () => {
                             </span>
                         )}
                     </div>
-
-
                     <div className="md:hidden cursor-pointer" onClick={() => setMenuIsOpen(!isMenuOpen)}>
                         {isMenuOpen ? <HiX className="text-3xl text-blue-400" /> : <HiOutlineMenuAlt3 className="text-3xl text-blue-400" />}
                     </div>
                 </div>
             </div>
-
             <ul className={`absolute top-16 left-0 w-full bg-white shadow-lg p-5 flex flex-col items-center space-y-4 transition-transform duration-300 ${isMenuOpen ? "translate-y-0" : "-translate-y-[200%]"} md:hidden`}>
                 {leftNavLinks.concat(rightNavLinks).map((link) => (
                     <Link key={link.name} to={link.path} onClick={() => setMenuIsOpen(false)}>
@@ -75,5 +68,4 @@ const NavBar = () => {
         </nav>
     );
 };
-
 export default NavBar;
