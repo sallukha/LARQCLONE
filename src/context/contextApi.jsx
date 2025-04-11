@@ -47,9 +47,7 @@ const GlobalProvider = ({ children }) => {
         </GlobeContext.Provider>
     );
 };
-
 const useGlobalContext = () => {
     return useContext(GlobeContext);
 };
-
 export { GlobalProvider, useGlobalContext };

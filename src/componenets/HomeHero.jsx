@@ -1,5 +1,4 @@
 import React from 'react';
-
 const HomeHero = () => {
     return (
         <>
@@ -36,8 +35,7 @@ const HomeHero = () => {
                     alt="Water Quality Background"
                     className="w-full  object-cover rounded-2xl h-[50%] "
                 />
-
-                <div className="absolute left-6 md:left-20 max-w-lg text-white ">
+                     <div className="absolute left-6 md:left-20 max-w-lg text-white ">
                     <h1 className='text-2xl md:text-4xl font-bold mb-4'>
                         What's in your tap water?
                     </h1>
@@ -45,8 +43,6 @@ const HomeHero = () => {
                         Legal limits are designed to keep us safe, but contaminants still slip through the cracks.
                         Find out what's lurking in your water.
                     </p>
-
-            
                     <div className="flex items-center space-x-4">
                         <button className='bg-white flex items-center px-5 py-3 rounded-full text-gray-600 font-semibold shadow-md hover:bg-gray-200 transition'>
                             Enter Zip <span className="ml-2">➡</span>
