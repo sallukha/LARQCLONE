@@ -27,7 +27,7 @@ const NavBar = () => {
             </ul>
             {/* Center (Logo) */}
             <div className="absolute left-1/2 transform -translate-x-1/2 text-xl font-bold">
-                <Link to="/">LARO</Link>
+                <Link to="/">LARQ</Link>
             </div>
             <div className="flex items-center space-x-6">
                 {/* Desktop Navigation */}

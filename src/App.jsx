@@ -2,8 +2,6 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './componenets/NavBar';
 import Footer from './componenets/Footer';
-
- 
 const Home = lazy(() => import('./pages/Home'));
 const ShopAll = lazy(() => import('./pages/ShopAll'));
 const Pitchers = lazy(() => import('./pages/Pitchers'));
@@ -13,13 +11,10 @@ const Register = lazy(() => import('./pages/Register'));
 const Technology = lazy(() => import('./pages/Technology'));
 const WaterQuality = lazy(() => import('./pages/WaterQuality'));
 const ShowProduct = lazy(() => import('./componenets/ShowProduct'));
-
 const App = () => {
   return (
     <BrowserRouter>
       <NavBar />
-
-      
       <Suspense fallback={<div className="text-center my-10 text-xl">Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -33,10 +28,8 @@ const App = () => {
           <Route path="/products/:id" element={<ShowProduct />} />
         </Routes>
       </Suspense>
-
       <Footer />
     </BrowserRouter>
   );
 };
-
 export default App;
