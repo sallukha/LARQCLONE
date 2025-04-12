@@ -14,7 +14,6 @@ const ShowProduct = lazy(() => import('./componenets/ShowProduct'));
 const App = () => {
   return (
     <BrowserRouter>
- 
     <NavBar />
     <Suspense fallback={<div className="text-center my-10 text-xl">Loading...</div>}>
       <Routes>
@@ -31,7 +30,6 @@ const App = () => {
     </Suspense>
     <Footer />
   </BrowserRouter>
-    
   );
 };
 export default App;
