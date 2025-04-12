@@ -1,16 +1,13 @@
 import React from 'react'
 import { pitchers } from '../json/Pitchers'
 import { useGlobalContext } from '../context/contextApi'
-
 const Pitchers = () => {
   const { handleAddCart } = useGlobalContext()
-
   return (
-    <div className="px-4 py-8 md:px-10 lg:px-16">
+    <div className="px-4 py-8 md:px-10 lg:px-16 my-16">
       <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-black">
         Our Pitchers Collection
       </h1>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {pitchers.bottle_pitchers.map((item, index) => (
           <div
