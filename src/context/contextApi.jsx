@@ -1,9 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import AddToCart from "../componenets/AddToCart";
 import { products } from "../json/JsonApi";
-
 const GlobeContext = createContext();
-
 const GlobalProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
     const [isOpen, SetIsOpen] = useState(false);
@@ -35,7 +33,7 @@ const GlobalProvider = ({ children }) => {
                         ? { ...item, quantity: item.quantity - 1 }
                         : item
                 )
-                .filter((item) => item.quantity > 0) 
+                .filter((item) => item.quantity > 0)
         );
     };
     return (

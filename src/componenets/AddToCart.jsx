@@ -74,9 +74,8 @@ const AddToCart = () => {
 
   return (
     <div
-      className={`fixed top-0 right-0 h-screen w-80 bg-white shadow-lg p-5 transition-transform transform ${
-        isOpen ? "translate-x-0" : "translate-x-full"
-      }`}
+      className={`fixed top-0 right-0 h-screen w-80 bg-white shadow-lg p-5 transition-transform transform ${isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
     >
       <button
         className="absolute top-4 right-4 text-gray-600 text-2xl hover:text-red-500 transition"

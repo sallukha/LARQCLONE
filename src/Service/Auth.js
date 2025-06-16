@@ -16,21 +16,10 @@ export const loginUser = async (userData) => {
 };
 export const registerUser = async (userData) => {
     try {
-        const response = await api.post("/sign_up", userData);
+        const response = await api.post("/signup", userData);
         return response.data;
     } catch (error) {
         throw error.response?.data?.message || "Registration failed!";
     }
 };
-export const getUserProfile = async (token) => {
-    try {
-        const response = await api.get("/user/profile", {
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
-        });
-        return response.data;
-    } catch (error) {
-        throw error.response?.data?.message || "Failed to fetch user profile!";
-    }
-};
+ 
